@@ -1,0 +1,68 @@
+/* Example: src/global.css */
+
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+/* Universal box-sizing reset — ensures padding and border
+   are included in an element's total width/height.
+   Without this, form inputs with padding/border overflow
+   their container when stretched to 100% width. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  color-scheme: light;
+  --surface-bg: #ffffff;
+  --surface-text: #111111;
+  --text-muted: #2c2c2c;
+  --text-subtle: #666666;
+  --text-faint: #444444;
+  --link-color: #06c;
+  --link-hover: #004999;
+  --border-color: #c9c9c9;
+  --border-strong: #dddddd;
+  --border-focus: #888888;
+  --input-bg: #ffffff;
+  --accent-color: #bf6a2e;
+  --accent-hover: #ab5d28;
+  --accent-text: #ffffff;
+  --error-color: #c0392b;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --surface-bg: #1b1b1b;
+    --surface-text: #c9c9c9;
+    --text-muted: #aeaeae;
+    --text-subtle: #8f8f8f;
+    --text-faint: #9c9c9c;
+    --link-color: #7db3ff;
+    --link-hover: #a8cbff;
+    --border-color: #3f3f3f;
+    --border-strong: #323232;
+    --border-focus: #666666;
+    --input-bg: #232323;
+    --accent-color: #bf6a2e;
+    --accent-hover: #cc7840;
+    --accent-text: #f3f3f3;
+    --error-color: #d4786f;
+  }
+}
+
+body {
+  font-family: 'EB Garamond', serif;
+  background: var(--surface-bg);
+  color: var(--surface-text);
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 640px) {
+  body {
+    margin: 0;
+  }
+}
